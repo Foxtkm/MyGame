@@ -1,21 +1,3 @@
-﻿  Actor.cpp
-c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\project1\actor\actor.cpp(9): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
-  ActorGroupManager.cpp
-  ActorManager.cpp
-  Application.cpp
-  BaseLine.cpp
-c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\project1\baseline\baseline.cpp(23): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  Piece.cpp
-  Square.cpp
-  BoundingRectangle.cpp
-  DxGraph.cpp
-c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\project1\dxgraph\dxgraph.cpp(18): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-  Field.cpp
-  main.cpp
-  Stage.cpp
-  Timer.cpp
-  Vector2D.cpp
-  World.cpp
-  コードを生成中...
-  LINK : 前回のインクリメンタル リンクで C:\Users\t1km2\Desktop\チーム制作_後期\練習用プロジェクト\MyGame\Project1\Debug\Project1.exe が見つからなかったか、ビルドされませんでした。フル リンクを行います。
-  Project1.vcxproj -> C:\Users\t1km2\Desktop\チーム制作_後期\練習用プロジェクト\MyGame\Project1\Debug\Project1.exe
+﻿Piece.obj : error LNK2001: 外部シンボル ""public: static int (* Define::stage)[15]" (?stage@Define@@2PAY0P@HA)" は未解決です。
+Stage.obj : error LNK2001: 外部シンボル ""public: static int (* Define::stage)[15]" (?stage@Define@@2PAY0P@HA)" は未解決です。
+C:\Users\t1km2\Desktop\チーム制作_後期\練習用プロジェクト\MyGame\Project1\Debug\Project1.exe : fatal error LNK1120: 1 件の未解決の外部参照

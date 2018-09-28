@@ -19,12 +19,13 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 
 	//計測中に別のウィンドウがアクティブになっても問題が無いように常時実行フラグをセット
 	SetAlwaysRunFlag(TRUE);
+	SetFontSize(32);
 
 
 	Application App;	//アプリケーション
 	FPSCounter fps;		//Fpsを一定にするクラス
-	App.start();		//アプリケーション初期化
 	fps.initialize();	//Fps初期化
+	App.start();		//アプリケーション初期化
 
 	while (App.isRunning()) {
 		fps.update();	//Fps更新
