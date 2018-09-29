@@ -1,3 +1,2 @@
-﻿Piece.obj : error LNK2001: 外部シンボル ""public: static int (* Define::stage)[15]" (?stage@Define@@2PAY0P@HA)" は未解決です。
-Stage.obj : error LNK2001: 外部シンボル ""public: static int (* Define::stage)[15]" (?stage@Define@@2PAY0P@HA)" は未解決です。
-C:\Users\t1km2\Desktop\チーム制作_後期\練習用プロジェクト\MyGame\Project1\Debug\Project1.exe : fatal error LNK1120: 1 件の未解決の外部参照
+﻿  Stage.cpp
+  Project1.vcxproj -> D:\C++自主\自分用C++\Git\MyGame\Project1\Debug\Project1.exe

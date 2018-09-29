@@ -2,8 +2,6 @@
 #define PIECE_H_
 #include"../../DxGraph/Define.h"
 
-//#include "DxLib.h"
-
 class Piece {
 public:
 	//‰Šú‰»
@@ -61,6 +59,5 @@ private:
 	{ 0,0,0,0 }
 	};
 
-	Define define_;
 };
 #endif // !PIECE_H_

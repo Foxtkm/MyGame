@@ -154,7 +154,6 @@
     <ClCompile Include="Actor\ActorManager\ActorManager.cpp" />
     <ClCompile Include="Application\Application.cpp" />
     <ClCompile Include="BaseLine\BaseLine.cpp" />
-    <ClCompile Include="Block\Piece\Piece.cpp" />
     <ClCompile Include="Block\Square\Square.cpp" />
     <ClCompile Include="Collision\Body\BoundingRectangle\BoundingRectangle.cpp" />
     <ClCompile Include="DxGraph\DxGraph.cpp" />
@@ -173,7 +172,6 @@
     <ClInclude Include="Actor\ActorPtr\ActorPtr.h" />
     <ClInclude Include="Application\Application.h" />
     <ClInclude Include="BaseLine\BaseLine.h" />
-    <ClInclude Include="Block\Piece\Piece.h" />
     <ClInclude Include="Block\Square\Square.h" />
     <ClInclude Include="Collision\Body\BoundingLine\BoundingLine.h" />
     <ClInclude Include="Collision\Body\BoundingRectangle\BoundingRectangle.h" />

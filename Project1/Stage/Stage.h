@@ -1,6 +1,6 @@
 #ifndef STAGE_H_
 #define STAGE_H_
-#include"../Block/Piece/Piece.h"
+
 class Stage {
 
 public:
@@ -8,30 +8,61 @@ public:
 	void update();
 	void draw();
 	void make_block();
+	void coli_bottom();
 	void end();
 private:
 
-//#define BLOCK_WIDTH 4 
-//#define BLOCK_HEIGHT 4 
-
+//セルのピクセル数
 #define CELL_BLOCK 32 
+//フィールドのセル数(横)
+#define FIELD_WIDTH 15
+//フィールドのセル数(縦)
+#define FIELD_HEIGHT 20
+//
+////セルのピクセル数
+//#define CELL_WIDTH 32
 
-	//int block[BLOCK_HEIGHT][BLOCK_WIDTH];
+#define BLOCK_WIDTH 4	//ブロックの横
+#define BLOCK_HEIGHT 4	//ブロックの縦
 
-	//int blocks[BLOCK_HEIGHT][BLOCK_WIDTH] = {
-	//{ 0,0,0,0 },
-	//{ 0,1,1,0 },
-	//{ 0,1,1,0 },
-	//{ 0,0,0,0 }
-	//};
-	//float block_y_count;
+
+    int stage[FIELD_HEIGHT][FIELD_WIDTH];
+
+	int block1[BLOCK_HEIGHT][BLOCK_WIDTH];	//4×4の配列
+	int block2[BLOCK_HEIGHT][BLOCK_WIDTH];
+
+
+	int blocks1[BLOCK_HEIGHT][BLOCK_WIDTH] = //ピースの形
+	{
+	{ 0,0,0,0 },
+	{ 0,1,1,0 },
+	{ 0,1,1,0 },
+	{ 0,0,0,0 }
+	};
+
+	int blocks2[BLOCK_HEIGHT][BLOCK_WIDTH] = //ピースの形
+	{
+	{ 0,0,1,0 },
+	{ 0,0,1,0 },
+	{ 0,1,1,0 },
+	{ 0,0,0,0 }
+	};
 
 	int Color_Red;
 	int Color_Green;
+	int Color_Blue;
+
+	//当たり判定用
+	int flag;
+	int flag2;
 
 	int img1;
 
-	Piece piece_;
-	Define define;
+	//現在のピースの座標
+	int px;	//x座標
+	int py;	//y座標
+
+	int px2;	//x座標
+	int py2;	//y座標
 };
 #endif // !STAGE_H_

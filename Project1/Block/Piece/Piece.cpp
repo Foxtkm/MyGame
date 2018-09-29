@@ -128,7 +128,7 @@ void Piece::coli_bottom()
 		for (int x = 0; x < BLOCK_WIDTH; x++) {
 			if (block1[y][x] != 0)
 			{
-				if (define_.stage[py + (y + 1)][px + x] != 0) {
+				if (stage[py + (y + 1)][px + x] != 0) {
 					flag = 1;
 				}
 			}
