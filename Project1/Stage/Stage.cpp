@@ -20,6 +20,11 @@ void Stage::initalize()
 		}
 	}
 
+	for (int x = 0; x < 15; x++) {
+		stage_positionX[x] = x;
+	}for (int y = 0; y < 20; y++) {
+		stage_positionY[y] = y;
+	}
 
 
 	//色の指定
@@ -31,13 +36,16 @@ void Stage::initalize()
 	flag = 0;
 	flag2 = 0;
 
-	px = 0;
-	py = 0;
-	px2 = 15;
-	py2 = 2;
 
 
-	img1 = LoadGraph("Resource/block.png");
+	px = stage_positionX[0];
+	py = stage_positionY[2];
+	px2 = stage_positionX[2];
+	py2 = stage_positionY[0];
+	px3 = stage_positionX[6];
+	py3 = stage_positionY[0];
+
+	//img1 = LoadGraph("Resource/block.png");
 }
 
 void Stage::update()
@@ -56,6 +64,13 @@ void Stage::update()
 	else if (flag2 == 1) {
 		py2 += 0;
 	}
+	if (flag3 == 0) {
+		py3 += 1;
+	}
+	else if (flag3 == 1) {
+		py3 += 0;
+
+	}
 }
 
 void Stage::draw()
@@ -65,8 +80,11 @@ void Stage::draw()
 	//壁の描画
 	for (y = 0; y < FIELD_HEIGHT; y++) {
 		for (x = 0; x < FIELD_WIDTH; x++) {
-			if (stage[y][x] == 9)DrawFormatString(x*CELL_BLOCK,
-				y * CELL_BLOCK, Color_Red, "■");
+			if (stage[y][x] == 1)DrawFormatString(x*CELL_BLOCK + 20 * CELL_BLOCK,
+				y * CELL_BLOCK + 10 * CELL_BLOCK, Color_Blue, "■");
+			else if (stage[y][x] == 9)DrawFormatString(x*CELL_BLOCK + 20 * CELL_BLOCK,
+				y * CELL_BLOCK + 10 * CELL_BLOCK, Color_Red, "■");
+
 		}
 	}
 
@@ -74,8 +92,8 @@ void Stage::draw()
 	for (int y = 0; y < BLOCK_HEIGHT; y++) {
 		for (int x = 0; x < BLOCK_WIDTH; x++) {
 			if (block1[y][x] == 1)DrawFormatString
-			(px * CELL_BLOCK + x * CELL_BLOCK,
-				py * CELL_BLOCK + y * CELL_BLOCK,
+			((px * CELL_BLOCK + 20 * CELL_BLOCK) + x * CELL_BLOCK,
+				(py * CELL_BLOCK +10*CELL_BLOCK)+ y * CELL_BLOCK,
 				Color_Blue, "■");
 		}
 	}
@@ -84,8 +102,18 @@ void Stage::draw()
 	for (int y = 0; y < BLOCK_HEIGHT; y++) {
 		for (int x = 0; x < BLOCK_WIDTH; x++) {
 			if (block2[y][x] == 1)DrawFormatString
-			(px2 * CELL_BLOCK + x * CELL_BLOCK,
-				py2 * CELL_BLOCK + y * CELL_BLOCK,
+			((px2 * CELL_BLOCK + 20 * CELL_BLOCK)+ x * CELL_BLOCK,
+				(py2 * CELL_BLOCK + 10*CELL_BLOCK)+ y * CELL_BLOCK,
+				Color_Blue, "■");
+		}
+	}
+
+	//ブロックの描画
+	for (int y = 0; y < BLOCK_HEIGHT; y++) {
+		for (int x = 0; x < BLOCK_WIDTH; x++) {
+			if (block3[y][x] == 1)DrawFormatString
+			((px3 * CELL_BLOCK + 20 * CELL_BLOCK) + x * CELL_BLOCK,
+				(py3 * CELL_BLOCK + 10 * CELL_BLOCK) + y * CELL_BLOCK,
 				Color_Blue, "■");
 		}
 	}
@@ -114,6 +142,13 @@ void Stage::make_block()
 			block2[y][x] = blocks2[y][x];
 		}
 	}
+
+	//ブロックの初期化
+	for (int y = 0; y < BLOCK_HEIGHT; y++) {
+		for (int x = 0; x < BLOCK_WIDTH; x++) {
+			block3[y][x] = blocks3[y][x];
+		}
+	}
 }
 
 void Stage::coli_bottom()
@@ -133,8 +168,19 @@ void Stage::coli_bottom()
 		for (int x = 0; x < BLOCK_WIDTH; x++) {
 			if (block2[y][x] != 0)
 			{
-				if (stage[py + (y + 1)][px + x] != 0) {
+				if (stage[py2 + (y + 1)][px2 + x] != 0) {
 					flag2 = 1;
+				}
+			}
+		}
+	}
+
+	for (int y = 0; y < BLOCK_HEIGHT; y++) {
+		for (int x = 0; x < BLOCK_WIDTH; x++) {
+			if (block3[y][x] != 0)
+			{
+				if (stage[py3 + (y + 1)][px3 + x] != 0) {
+					flag3 = 1;
 				}
 			}
 		}
