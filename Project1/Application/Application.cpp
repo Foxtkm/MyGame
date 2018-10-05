@@ -10,13 +10,13 @@ Application::~Application()
 
 void Application::start() {
 	
-
+	gene_time;
 	stage_.initalize();
 	//for (int y = 0; y < 5; y++) {
 	//	for (int x = 0; y < 5; y++) {
 
-	//		world_.add_actor(ActorGroup::Square_Block,
-	//			new_actor<Square>(world_, Vector2(texSize*y, 0)));
+			world_.add_actor(ActorGroup::Square_Block,
+				new_actor<Square>(world_, Vector2(WINDOW_WIDTH/2,32)));
 	//	}
 	//}
 
@@ -24,8 +24,8 @@ void Application::start() {
 	//	world_.add_actor(ActorGroup::Square_Block,
 	//		new_actor<Square>(world_, Vector2{0,0}));
 	//
-	//world_.add_actor(ActorGroup::Player,
-	//	new_actor<BaseLine>(world_, Vector2{WINDOW_WIDTH/2,900}));
+	world_.add_actor(ActorGroup::Player,
+		new_actor<BaseLine>(world_, Vector2{WINDOW_WIDTH/2,900}));
 }
 
 void Application::update() {

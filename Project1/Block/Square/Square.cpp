@@ -17,25 +17,29 @@ Square::Square(IWorld & world, const Vector2 & position)
 void Square::update()
 {
 
-	//if (!colide_flag) {
-	//	velocity_.y = 10;
+	if (!colide_flag) {
+		velocity_.y = 10;
 	//	//if (CheckHitKey(KEY_INPUT_W))velocity.y = -1.0f;
 	//	//if (CheckHitKey(KEY_INPUT_A))velocity.x = -1.0f;
 	//	//if (CheckHitKey(KEY_INPUT_S))velocity.y = 1.0f;
 	//	//if (CheckHitKey(KEY_INPUT_D))velocity.x = 1.0f;
 	//	//velocity_ = velocity.normalize()*2.0f;
-	//}
-	//else {
-	//	velocity_.y = 0;
-	//}
+	}
+	else {
+		velocity_.y = 0;
+	}
 
-	//position_ += velocity_;
+	position_ += velocity_;
 
-	const auto& area = world_->field().area();
-
+	//const auto& area = world_->field().area();
+	if (world_->field().is_outside(body())) 
+	{
+		die(); 
+	}
 }
 
 void Square::react(Actor & )
 {
-	//colide_flag = true;
+	colide_flag = true;
+//	die();
 }

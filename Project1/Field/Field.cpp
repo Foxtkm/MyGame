@@ -3,7 +3,8 @@
 #include<cmath>
 
 Field::Field(const BoundingRectangle & area)
-	:area_{area}{
+	:area_{area},
+	extend_area_{ area.expand({128.0f,128.0f}) }{
 }
 
 void Field::initialize()
@@ -22,7 +23,7 @@ void Field::draw() const
 
 bool Field::is_outside(const BoundingRectangle & rect)
 {
-	return !area_.intersects(rect);
+	return !extend_area_.intersects(rect);
 }
 
 const BoundingRectangle & Field::area() const

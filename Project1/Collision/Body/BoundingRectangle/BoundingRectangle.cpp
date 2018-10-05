@@ -29,6 +29,11 @@ BoundingRectangle BoundingRectangle::translate(const Vector2 & position) const
 	return { min_ + position,max_ + position };
 }
 
+BoundingRectangle BoundingRectangle::expand(const Vector2 & size) const
+{
+	return {min_-size,max_+size};
+}
+
 float BoundingRectangle::width() const
 {
 	return max_.x - min_.x;

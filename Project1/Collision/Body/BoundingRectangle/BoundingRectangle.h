@@ -24,6 +24,9 @@ public:
 	//平行移動
 	BoundingRectangle translate(const Vector2& position)const;
 
+	//サイズ拡張
+	BoundingRectangle expand(const Vector2& size)const;
+
 	//幅
 	float width()const;
 	//高さ

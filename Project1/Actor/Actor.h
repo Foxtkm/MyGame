@@ -63,7 +63,7 @@ protected:
 	bool				dead_{ false };
 	//テクスチャID
 	Uint				texture_{ 0 };
-
-
+	//画像の倍率(1.0等倍)
+	double				exRate{ 1.0f };
 };
 #endif // !ACTOR_H_

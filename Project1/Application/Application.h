@@ -51,15 +51,10 @@ public:
 	//float mFps;
 	Timer timer;
 
-	int pos[5][5] = {
-	{ 0,0,0,0,0 },
-	{ 0,0,0,0,1 },
-	{ 0,0,0,0,1 },
-	{ 0,0,0,0,1 },
-	{ 0,0,1,1,1 },
-	};
 private:
 	int texSize{ 32 };
 	Stage stage_;
+
+	float gene_time;
 };
 #endif // !APPLICATION_H_

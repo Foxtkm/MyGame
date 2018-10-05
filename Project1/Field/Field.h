@@ -22,9 +22,9 @@ public:
 
 private:
 	// “y‘äƒGƒŠƒA 
-	BoundingRectangle area_{ 64.0f, 64.0f, 416.0f, 520.0f };
+	BoundingRectangle area_{ 0.0f, 0.0f, 1920.0f, 1080.0f };
 
-
+	BoundingRectangle extend_area_{ area_.expand({128.0f,128.0f}) };
 };
 
 #endif // !FIELD_H_
