@@ -33,7 +33,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		App.update();	//アプリケーション更新
 		App.draw();		//アプリケーション描画
 		ScreenFlip();	//裏画面の内容を表画面に反映させる
-
 		fps.Wait();		//Fps待機
 	}
 

@@ -10,8 +10,8 @@ Square::Square(IWorld & world, const Vector2 & position)
 	name_ = "Square";
 	position_ = position;
 	velocity_ = velocity;
-	body_ = BoundingRectangle{ 0.0f,0.0f,32.0f,32.0f };
-	texture_ = LoadGraph("Resource/block.png");
+	body_ = BoundingRectangle{ -32.0f,-32.0f,32.0f,32.0f };
+	texture_[0] = LoadGraph("Resource/block.png");
 }
 
 void Square::update()

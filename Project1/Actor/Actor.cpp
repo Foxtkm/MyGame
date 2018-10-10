@@ -6,7 +6,9 @@ void Actor::update()
 
 void Actor::draw() const
 {
-	DrawRotaGraph(position_.x, position_.y,exRate,angle_,texture_, TRUE,FALSE);
+	for (int i = 0; i < 2; i++) {
+		DrawRotaGraph(position_.x, position_.y, exRate, angle_, texture_[i], TRUE, FALSE);
+	}
 }
 
 void Actor::react(Actor & other)

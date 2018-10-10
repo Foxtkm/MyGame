@@ -13,6 +13,7 @@ enum class ActorGroup
 	Rectangle_Block,	//’·•ûŒ`
 	Rectangle_Block2,	//’·•ûŒ`
 	Block2,
+	Nucleus,
 	None
 
 };

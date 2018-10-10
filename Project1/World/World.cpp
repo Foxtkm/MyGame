@@ -13,6 +13,7 @@ void World::initialize()
 	actors_.add(ActorGroup::Rectangle_Block);
 	actors_.add(ActorGroup::Square_Block);
 	actors_.add(ActorGroup::Player);
+	actors_.add(ActorGroup::Nucleus);
 	
 	field_.initialize();
 }
@@ -23,6 +24,8 @@ void World::update()
 	actors_.update();
 	actors_.collide(ActorGroup::Player, ActorGroup::Square_Block);
 	actors_.collide(ActorGroup::Rectangle_Block, ActorGroup::Rectangle_Block2);
+	actors_.collide(ActorGroup::Player, ActorGroup::Nucleus);
+	actors_.collide(ActorGroup::Nucleus, ActorGroup::Square_Block);
 	actors_.remove();
 }
 

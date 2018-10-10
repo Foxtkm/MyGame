@@ -56,5 +56,6 @@ private:
 	Stage stage_;
 
 	float gene_time;
+	float count;
 };
 #endif // !APPLICATION_H_

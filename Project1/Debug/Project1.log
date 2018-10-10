@@ -1,2 +1,3 @@
-﻿  Square.cpp
+﻿  Application.cpp
+c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\project1\application\application.cpp(24): warning C4244: '引数': 'int' から 'float' への変換です。データが失われる可能性があります。
   Project1.vcxproj -> C:\Users\t1km2\Desktop\チーム制作_後期\練習用プロジェクト\MyGame\Project1\Debug\Project1.exe
