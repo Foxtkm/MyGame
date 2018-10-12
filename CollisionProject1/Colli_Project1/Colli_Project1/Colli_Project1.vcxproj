@@ -149,12 +149,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Actor\Actor.cpp" />
+    <ClCompile Include="Collision\Box\Box.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Vector\Vector2D\Vector2D.cpp" />
+    <ClCompile Include="World\World.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Actor\Actor.h" />
+    <ClInclude Include="Collision\Box\Box.h" />
     <ClInclude Include="ScreenSetings\ScreenSet.h" />
     <ClInclude Include="Vector\Vector2D\Vector2D.h" />
+    <ClInclude Include="World\IWorld\IWorld.h" />
+    <ClInclude Include="World\World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

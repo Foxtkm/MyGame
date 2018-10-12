@@ -12,7 +12,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	Screen.ScreenBackMode();
 
 
-	SetFontSize(32);
+	//SetFontSize(32);
 
 	DrawBox(0, 0, 640, 480, GetColor(255,0,0), FALSE);    // ŽlŠpŒ`‚ð•`‰æ
 
