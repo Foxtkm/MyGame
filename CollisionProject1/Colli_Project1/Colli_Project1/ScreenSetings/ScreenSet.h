@@ -13,7 +13,7 @@ public:
 		SetWindowSizeExtendRate(1.0f);
 		//ウィンドウモードにするか
 		ChangeWindowMode(ChangeWindowFlag);
-		SetUseDirect3DVersion(DX_DIRECT3D_9);
+		//SetUseDirect3DVersion(DX_DIRECT3D_9);
 		//描画倍率
 		SetWindowSizeExtendRate(RATE);
 
@@ -22,10 +22,10 @@ public:
 	void ScreenBackMode() {
 		//描画先画面を裏画面にセット
 		SetDrawScreen(DX_SCREEN_BACK);
-		SetUseBackCulling(TRUE);
+		//SetUseBackCulling(TRUE);
 
 		//計測中に別のウィンドウがアクティブになっても問題が無いように常時実行フラグ
-		SetAlwaysRunFlag(TRUE);
+		//SetAlwaysRunFlag(TRUE);
 	}
 
 };

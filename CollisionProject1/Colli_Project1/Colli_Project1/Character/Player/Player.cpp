@@ -6,6 +6,8 @@ Player::Player(IWorld & world, const Vector2 & position)
 	name_ = "Player";
 	Seg_body_ = BoundingSegment{ Vector2{0,0},Vector2{256.0f,256.0f} };
 	//texture_[0]=LoadGraph("")
+	position_ = position;
+	Cr = GetColor(255, 255, 255);
 }
 
 Player::~Player()
@@ -27,15 +29,14 @@ void Player::update()
 
 void Player::react(Actor & other)
 {
-	printfDx("aaaa\n");
 }
 
 void Player::draw() const
 {
-	/*DrawBox(position_.x - width, position_.y - height,
-			position_.x + width, position_.y + height,
+	/*DrawBox(position_.x - width, position_.y - width,
+			position_.x + width, position_.y + width,
 			GetColor(255, 0, 0), FALSE);*/
 	DrawLine(position_.x - width / 2, position_.y,
-			 position_.x + width / 2, position_.y,
-			 GetColor(255, 255, 255));
+		position_.x + width / 2, position_.y,
+		Cr);
 }

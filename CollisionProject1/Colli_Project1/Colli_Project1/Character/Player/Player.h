@@ -15,5 +15,6 @@ public:
 private:
 	float width{ 256 };
 	//float height{ 256 };
+	int Cr;
 };
 #endif // !PLAYER_H_
