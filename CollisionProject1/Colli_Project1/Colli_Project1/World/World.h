@@ -3,7 +3,6 @@
 
 #include"IWorld/IWorld.h"
 #include"../Actor/ActorGroupManager/ActorGroupManager.h"
-#include"../Field/Field.h"
 #include"../Actor/ActorPtr/ActorPtr.h"
 #include<functional>
 
@@ -28,14 +27,14 @@ public:
 	virtual unsigned int count_actor(ActorGroup group) const override;
 
 	// フィールドを取得
-	virtual Field& field() override;
+	//virtual Field& field() override;
 // コピー禁止 
 	World(const World& other) = delete; World& operator = (const World& other) = delete;
 private: 
 	// アクターマネージャー 
 	ActorGroupManager actors_; 
 	// フィールド 
-	Field field_; 
+	//Field field_; 
 
 };
 #endif // !WORLD_H_

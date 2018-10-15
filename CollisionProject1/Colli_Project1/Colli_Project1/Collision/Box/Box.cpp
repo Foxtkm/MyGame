@@ -3,6 +3,7 @@
 Box::Box(float left, float top, float right, float bottom) :
 	Box{ {left,top},{right,bottom} }
 {
+	
 }
 
 Box::Box(const Vector2 & min, const Vector2 & max) :

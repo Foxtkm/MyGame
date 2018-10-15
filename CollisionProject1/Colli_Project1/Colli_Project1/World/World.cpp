@@ -15,12 +15,12 @@ void World::initialize()
 	actors_.add(ActorGroup::Player);
 	actors_.add(ActorGroup::Nucleus);
 	
-	field_.initialize();
+	//field_.initialize();
 }
 
 void World::update()
 {
-	field_.update();
+	//field_.update();
 	actors_.update();
 	actors_.collide(ActorGroup::Player, ActorGroup::Square_Block);
 	actors_.collide(ActorGroup::Rectangle_Block, ActorGroup::Rectangle_Block2);
@@ -31,7 +31,7 @@ void World::update()
 
 void World::draw() const
 {
-	field_.draw();
+	//field_.draw();
 	actors_.draw();
 }
 
@@ -55,7 +55,7 @@ unsigned int World::count_actor(ActorGroup group) const
 	return actors_.count(group);
 }
 
-Field & World::field()
-{
-	return field_;
-}
+//Field & World::field()
+//{
+//	return field_;
+//}

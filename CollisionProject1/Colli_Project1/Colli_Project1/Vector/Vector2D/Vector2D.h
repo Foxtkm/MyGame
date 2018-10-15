@@ -44,6 +44,15 @@ struct Vector2
 	Vector2& operator *=(float s);					//複合代入演算子 *=
 	Vector2& operator /=(float s);					//複合代入演算子 /=
 
+	// 定数
+	static const Vector2 Up;			// Vector2( 0,  1)
+	static const Vector2 Down;			// Vector2( 0, -1)
+	static const Vector2 Left;			// Vector2(-1,  0)
+	static const Vector2 Right;			// Vector2( 1,  0)
+	static const Vector2 UnitX;			// Vector2( 1,  0)
+	static const Vector2 UnitY;			// Vector2( 0,  1)
+	static const Vector2 One;			// Vector2( 1,  1)
+	static const Vector2 Zero;			// Vector2( 0,  0)
 	//template <class Char> // 出力ストリーム
 	//inline std::basic_ostream<Char>& operator <<(std::basic_ostream<Char>& os, const Vec2& v)
 	//{

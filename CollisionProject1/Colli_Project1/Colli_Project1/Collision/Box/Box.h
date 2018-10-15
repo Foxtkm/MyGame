@@ -22,6 +22,5 @@ private:
 	Vector2 min_{ 0.0f,0.0f };
 	Vector2 max_{ 0.0f,0.0f };
 
-
 };
 #endif // !BOX_H_

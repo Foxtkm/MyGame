@@ -5,6 +5,7 @@
 #include<string>
 #include"DxLib.h"
 #include"../Collision/Box/Box.h"
+#include"../Collision/BoundingSegment/BoundingSegment.h"
 
 class IWorld;
 
@@ -41,29 +42,32 @@ public:
 	//移動量を取得
 	Vector2 velocity()const;
 	//衝突判定データを取得
-	Box body()const;
+	Box Box_body()const;
+	//衝突判定
 	//コピー禁止
 	Actor(const Actor& other) = delete;
 	Actor& operator = (const Actor& other) = delete;
 
 protected:
 	//ワールド
-	IWorld*				world_		{ nullptr };
+	IWorld * world_{ nullptr };
 	//名前
-	std::string			name_		{};
+	std::string			name_{};
 	//座標
-	Vector2				position_	{ 0.0f,0.0f };
+	Vector2				position_{ 0.0f,0.0f };
 	//回転角度
-	float				angle_		{ 0.0f };
+	float				angle_{ 0.0f };
 	//移動量
-	Vector2				velocity_	{ 0.0f,0.0f };
+	Vector2				velocity_{ 0.0f,0.0f };
 	//衝突判定(矩形)
-	Box					Box_body	{ 0.0f,0.0f,0.0f,0.0f };
-	//死亡フラグ
-	bool				dead_		{ false };
+	Box					Box_body_{ 0.0f,0.0f,0.0f,0.0f };
+	//衝突判定(線形)
+	BoundingSegment		Seg_body_{ Vector2{0.0f,0.0f},Vector2{0.0f,0.0f} };
+		//死亡フラグ
+	bool				dead_{ false };
 	//テクスチャID
 	int					texture_[10];
 	//画像の倍率(1.0等倍)
-	double				exRate		{ 1.0f };
+	double				exRate{ 1.0f };
 };
 #endif // !ACTOR_H_

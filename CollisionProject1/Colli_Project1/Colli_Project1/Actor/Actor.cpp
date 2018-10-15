@@ -30,7 +30,9 @@ void Actor::die()
 
 bool Actor::is_collide(const Actor & other) const
 {
-	return body().intersects(other.body());
+	if (Box_body().intersects(other.Box_body()))return true;
+	if (Seg_body_.intersects(other.Seg_body_))return true;
+	return false;
 }
 
 bool Actor::is_dead() const
@@ -58,7 +60,8 @@ Vector2 Actor::velocity() const
 	return velocity_;
 }
 
-Box Actor::body() const
+
+Box Actor::Box_body() const
 {
-	return Box_body.translate(position_);
+	return Box_body_.translate(position_);
 }

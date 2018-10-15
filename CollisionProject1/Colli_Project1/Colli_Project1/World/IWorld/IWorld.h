@@ -5,7 +5,7 @@
 #include<string>
 
 enum class ActorGroup;
-class Field;
+//class Field;
 
 class IWorld {
 public:
@@ -19,6 +19,6 @@ public:
 	// アクター数の取得 
 	virtual unsigned int count_actor(ActorGroup group) const = 0; 
 	// フィールドを取得 
-	virtual Field& field() = 0;
+	//virtual Field& field() = 0;
 };
 #endif // !IWORLD_H_
