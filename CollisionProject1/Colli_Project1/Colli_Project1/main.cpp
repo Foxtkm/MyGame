@@ -28,7 +28,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 		new_actor<Player>(world, Vector2(0, 700)));
 
 	world.add_actor(ActorGroup::Enemy,
-		new_actor<Enemy>(world, Vector2(500, 700)));
+		new_actor<Enemy>(world, Vector2(1000, 700)));
 
 
 	while (ProcessMessage() == 0 && ClearDrawScreen() == 0)

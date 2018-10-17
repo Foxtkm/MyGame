@@ -13,7 +13,7 @@ bool BoundingSegment::contains(const Vector2 & position) const
 
 bool BoundingSegment::intersects(const BoundingSegment & other) const
 {
-	if ((Point1.x - Point2.x)*(other.Point1.y - Point1.y) + (Point1.y - Point2.y)*(Point1.x - other.Point1.x)*
-		(Point1.x - Point2.x)*(other.Point2.y - Point1.y) + (Point1.y - Point2.y)*(Point1.x - other.Point2.x) > 0)return true;
-	return false;
+	if (Vector2::Cross(Point2 - Point1, other.Point2 - other.Point1) < 0)return false;
+
+	return true;
 }

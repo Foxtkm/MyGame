@@ -10,64 +10,61 @@ const Vector2 Vector2::UnitY(0.0f, 1.0f);
 const Vector2 Vector2::One(1.0f, 1.0f);
 const Vector2 Vector2::Zero(0.0f, 0.0f);
 
- Vector2::Vector2(float _x, float _y)
+Vector2::Vector2(float _x, float _y)
 	:x(_x), y(_y)
 {
 }
 
-float Vector2::length()const
+float Vector2::Length()const
 {
-	return std::sqrt(lengthSquare());
+	return std::sqrt(Dot(*this,*this));
 }
 
- float Vector2::lengthSquare() const {
-	return dot(*this);
+
+float Vector2::Dot(const Vector2& vector1, const Vector2& vector2) {
+	return vector1.x * vector2.x + vector1.y * vector2.y;
 }
 
- float Vector2::dot(const Vector2& other)const {
-	return x * other.x + y * other.y;
-}
-
-float Vector2::distanceFrom(const Vector2& other)const {
-	return (other - *this).length();
-}
-
-Vector2 Vector2::normalize() const
+float Vector2::Cross(const Vector2& vector1, const Vector2& vector2) 
 {
-	return *this / length();
+	return vector1.x * vector2.y - vector2.x * vector1.y;
 }
 
- bool Vector2::isZero()const {
-	return x == 0.0 && y == 0.0;
+float Vector2::Distance(const Vector2& vector1, const Vector2& vector2) {
+	return (vector2 - vector1).Length();
 }
 
-
- Vector2 Vector2::operator+() const
+Vector2 Vector2::Normalize(const Vector2& value) const
 {
-	return Vector2(x,y);
+	return *this / Length();
 }
 
- Vector2 Vector2::operator-() const
+Vector2 Vector2::operator+() const
+{
+	return Vector2(x, y);
+}
+
+Vector2 Vector2::operator-() const
 {
 	return Vector2(-x, -y);
 }
 
- Vector2 Vector2::operator+(const Vector2 & other) const
+Vector2 Vector2::operator+(const Vector2 & other) const
 {
 	return Vector2(x + other.x, y + other.y);
 }
 
- Vector2 Vector2::operator-(const Vector2 & other) const
+Vector2 Vector2::operator-(const Vector2 & other) const
 {
 	return Vector2(x - other.x, y - other.y);
 }
 
- Vector2 Vector2::operator*(float s) const
+Vector2 Vector2::operator*(float s) const
 {
 	return Vector2(x*s, y*s);
 }
 
- Vector2 Vector2::operator/(float s) const
+Vector2 Vector2::operator/(float s) const
 {
 	return Vector2(x / s, y / s);
 }

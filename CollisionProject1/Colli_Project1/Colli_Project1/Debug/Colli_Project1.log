@@ -1,6 +1,21 @@
-﻿  Enemy.cpp
-d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(38): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
-d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(38): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
-d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(37): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
-d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(37): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+﻿  Actor.cpp
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\actor\actor.cpp(10): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+  ActorGroupManager.cpp
+  ActorManager.cpp
+  Enemy.cpp
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(40): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(40): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(39): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(39): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  Player.cpp
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\player\player.cpp(41): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\player\player.cpp(41): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\player\player.cpp(40): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+d:\c++自主\自分用c++\git\mygame\collisionproject1\colli_project1\colli_project1\character\player\player.cpp(40): warning C4244: '引数': 'float' から 'int' への変換です。データが失われる可能性があります。
+  BoundingSegment.cpp
+  Box.cpp
+  Vector2D.cpp
+  World.cpp
+  main.cpp
+  コードを生成中...
   Colli_Project1.vcxproj -> D:\C++自主\自分用C++\Git\MyGame\CollisionProject1\Colli_Project1\Debug\Colli_Project1.exe
