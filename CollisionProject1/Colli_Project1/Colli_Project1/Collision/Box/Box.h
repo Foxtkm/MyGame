@@ -1,4 +1,5 @@
 #ifndef BOX_H_
+#define BOX_H_
 #include"../../Vector/Vector2D/Vector2D.h"
 
 class Box {
