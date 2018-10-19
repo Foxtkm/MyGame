@@ -30,8 +30,9 @@ void Actor::die()
 
 bool Actor::is_collide(const Actor & other) const
 {
-	if (Box_body().intersects(other.Box_body()))return true;
+	if (Box_body().Extrusion(other.Box_body()))return true;
 	//if (Seg_body().intersects(other.Seg_body()))return true;
+	//if (Circle_body().intersects(other.Circle_body()))return true;
 	return false;
 }
 
@@ -69,4 +70,14 @@ Box Actor::Box_body() const
 BoundingSegment Actor::Seg_body() const
 {
 	return Seg_body_.translate(position_);
+}
+
+Circle Actor::Circle_body() const
+{
+	return Circle_body_.translate(position_);
+}
+
+void Actor::Box_Extru(const Actor& other) const
+{
+
 }

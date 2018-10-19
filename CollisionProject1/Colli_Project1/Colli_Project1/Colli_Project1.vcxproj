@@ -156,6 +156,7 @@
     <ClCompile Include="Character\Player\Player.cpp" />
     <ClCompile Include="Collision\BoundingSegment\BoundingSegment.cpp" />
     <ClCompile Include="Collision\Box\Box.cpp" />
+    <ClCompile Include="Collision\Circle\Circle.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Vector\Vector2D\Vector2D.cpp" />
     <ClCompile Include="World\World.cpp" />
@@ -171,6 +172,7 @@
     <ClInclude Include="Collision\Body\Body.h" />
     <ClInclude Include="Collision\BoundingSegment\BoundingSegment.h" />
     <ClInclude Include="Collision\Box\Box.h" />
+    <ClInclude Include="Collision\Circle\Circle.h" />
     <ClInclude Include="Library\Input\Input.h" />
     <ClInclude Include="Library\Screen\Define.h" />
     <ClInclude Include="Library\Screen\Screen.h" />

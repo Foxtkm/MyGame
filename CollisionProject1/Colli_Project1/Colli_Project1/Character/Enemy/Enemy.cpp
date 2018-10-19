@@ -5,8 +5,10 @@ Enemy::Enemy(IWorld & world, const Vector2 & position)
 	world_ = &world;
 	name_ = "Enemy";
 	//Seg_body_ = BoundingSegment{ Vector2{-width / 2,0},Vector2{width / 2,0} };
-	Box_body_ = Box{ -250,-250,250,250 };
+	//Box_body_ = Box{ -250,-250,250,250 };
+	Circle_body_ = Circle{ Vector2{position_.x,position_.y},150 };
 	position_ = position;
+
 	Cr = GetColor(255, 255, 255);
 	flag = false;
 }
@@ -43,4 +45,7 @@ void Enemy::draw() const
 	DrawBox(position_.x - 250, position_.y - 250,
 		position_.x + 250, position_.y + 250,
 		Cr, FALSE);
+
+	//DrawCircle(position_.x, position_.y, 150, Cr, FALSE);
+
 }

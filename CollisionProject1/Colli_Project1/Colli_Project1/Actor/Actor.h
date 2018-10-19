@@ -6,7 +6,7 @@
 #include"DxLib.h"
 #include"../Collision/Box/Box.h"
 #include"../Collision/BoundingSegment/BoundingSegment.h"
-
+#include"../Collision/Circle/Circle.h"
 class IWorld;
 
 class Actor {
@@ -45,6 +45,9 @@ public:
 	Box Box_body()const;
 	//衝突判定データ取得
 	BoundingSegment Seg_body()const;
+	//衝突判定データ取得
+	Circle	Circle_body()const;
+	void Box_Extru(const Actor& other)const;
 	//衝突判定
 	//コピー禁止
 	Actor(const Actor& other) = delete;
@@ -65,7 +68,9 @@ protected:
 	Box					Box_body_{ 0.0f,0.0f,0.0f,0.0f };
 	//衝突判定(線形)
 	BoundingSegment		Seg_body_{ Vector2{0.0f,0.0f},Vector2{0.0f,0.0f} };
-		//死亡フラグ
+	//衝突判定(円)
+	Circle				Circle_body_{ Vector2{0.0f,0.0f},0.0f };
+	//死亡フラグ
 	bool				dead_{ false };
 	//テクスチャID
 	int					texture_[10];
