@@ -43,6 +43,8 @@ public:
 	Vector2 velocity()const;
 	//衝突判定データを取得
 	Box Box_body()const;
+	//衝突判定データ取得
+	BoundingSegment Seg_body()const;
 	//衝突判定
 	//コピー禁止
 	Actor(const Actor& other) = delete;

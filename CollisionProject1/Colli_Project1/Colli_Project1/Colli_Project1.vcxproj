@@ -168,6 +168,7 @@
     <ClInclude Include="Actor\ActorPtr\ActorPtr.h" />
     <ClInclude Include="Character\Enemy\Enemy.h" />
     <ClInclude Include="Character\Player\Player.h" />
+    <ClInclude Include="Collision\Body\Body.h" />
     <ClInclude Include="Collision\BoundingSegment\BoundingSegment.h" />
     <ClInclude Include="Collision\Box\Box.h" />
     <ClInclude Include="Library\Input\Input.h" />

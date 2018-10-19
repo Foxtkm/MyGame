@@ -10,6 +10,8 @@ public:
 	//“_‚ª‹éŒ`‚Ì’†‚É“ü‚Á‚Ä‚¢‚é‚©‚Ç‚¤‚©
 	bool contains(const Vector2& position)const;
 	bool intersects(const BoundingSegment& other)const;
+	BoundingSegment translate(const Vector2& position)const;
+
 
 private:
 	Vector2 Point1{ 0.0f,0.0f };
