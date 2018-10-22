@@ -10,8 +10,8 @@ public:
 	virtual void react(Actor& other)override;
 	virtual void draw()const;
 private:
-	float width{ 256 };
-	float height{ 256 };
+	float width{ 250 };
+	float height{ 250 };
 	int Cr;
 	bool flag;
 };

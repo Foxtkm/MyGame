@@ -47,7 +47,6 @@ public:
 	BoundingSegment Seg_body()const;
 	//衝突判定データ取得
 	Circle	Circle_body()const;
-	void Box_Extru(const Actor& other)const;
 	//衝突判定
 	//コピー禁止
 	Actor(const Actor& other) = delete;

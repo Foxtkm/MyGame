@@ -67,19 +67,17 @@ bool Box::Extrusion(const Box & other) const
 	////ç∂ë§
 	//Line[3] = Point[0] - Point[3];
 
-	bool flag1 = false;
-	bool flag2 = false;
-	bool flag3 = false;
-	bool flag4 = false;
+
 
 	for (int p = 0; p < 4; p++) {
-		Line[p] = Point[(p + 1) % 4] - Point[p];
+		bool flag{ true };
 		for (int o = 0; o < 4; o++) {
-			Vector2 v[4];
-			v[o] = other_Point[(o + 1) % 4] - Point[o];
+			Vector2 var = Point[(p + 1) % 4] - Point[o];
+			Vector2 v = other_Point[p] - Point[o];
 
-			if (Vector2::Cross(Line[p], v[o])<=0)return true;
+			if (Vector2::Cross(var, v) > 0) { flag = false; };
 		}
+		if (flag)return true;
 	}
 
 	return false;
