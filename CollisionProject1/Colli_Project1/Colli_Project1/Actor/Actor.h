@@ -4,9 +4,9 @@
 #include"../Vector/Vector2D/Vector2D.h"
 #include<string>
 #include"DxLib.h"
-#include"../Collision/Box/Box.h"
+#include"../Collision/BoundingBox/BoundingBox.h"
 #include"../Collision/BoundingSegment/BoundingSegment.h"
-#include"../Collision/Circle/Circle.h"
+#include"../Collision/BoundingCircle/BoundingCircle.h"
 class IWorld;
 
 class Actor {
@@ -42,11 +42,11 @@ public:
 	//移動量を取得
 	Vector2 velocity()const;
 	//衝突判定データを取得
-	Box Box_body()const;
+	BoundingBox Box_body()const;
 	//衝突判定データ取得
 	BoundingSegment Seg_body()const;
 	//衝突判定データ取得
-	Circle	Circle_body()const;
+	BoundingCircle	Circle_body()const;
 	//衝突判定
 	//コピー禁止
 	Actor(const Actor& other) = delete;
@@ -64,11 +64,11 @@ protected:
 	//移動量
 	Vector2				velocity_{ 0.0f,0.0f };
 	//衝突判定(矩形)
-	Box					Box_body_{ 0.0f,0.0f,0.0f,0.0f };
+	BoundingBox			Box_body_{ 0.0f,0.0f,0.0f,0.0f };
 	//衝突判定(線形)
 	BoundingSegment		Seg_body_{ Vector2{0.0f,0.0f},Vector2{0.0f,0.0f} };
 	//衝突判定(円)
-	Circle				Circle_body_{ Vector2{0.0f,0.0f},0.0f };
+	BoundingCircle		Circle_body_{ Vector2{0.0f,0.0f},0.0f };
 	//死亡フラグ
 	bool				dead_{ false };
 	//テクスチャID

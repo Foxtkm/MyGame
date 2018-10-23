@@ -1,5 +1,16 @@
 ﻿  Actor.cpp
-d:\c++自主\自分用c++\git\mygame\mygame\collisionproject1\colli_project1\colli_project1\actor\actor.cpp(10): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
-d:\c++自主\自分用c++\git\mygame\mygame\collisionproject1\colli_project1\colli_project1\actor\actor.cpp(33): error C2664: 'bool Box::Extrusion(const Box &) const': 引数 1 を 'const Actor' から 'const Box &' へ変換できません。
-  d:\c++自主\自分用c++\git\mygame\mygame\collisionproject1\colli_project1\colli_project1\actor\actor.cpp(33): note: 理由: 'const Actor' から 'const Box' へは変換できません。
-  d:\c++自主\自分用c++\git\mygame\mygame\collisionproject1\colli_project1\colli_project1\actor\actor.cpp(33): note: この変換を実行可能なユーザー定義変換演算子がないか、または演算子を呼び出せません。
+c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\collisionproject1\colli_project1\colli_project1\actor\actor.cpp(10): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+  ActorGroupManager.cpp
+  ActorManager.cpp
+  Enemy.cpp
+c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\collisionproject1\colli_project1\colli_project1\character\enemy\enemy.cpp(49): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+  Player.cpp
+c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\collisionproject1\colli_project1\colli_project1\character\player\player.cpp(48): warning C4244: '引数': 'const float' から 'int' への変換です。データが失われる可能性があります。
+  BoundingBox.cpp
+c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\collisionproject1\colli_project1\colli_project1\collision\boundingbox\boundingbox.cpp(61): warning C4101: 'Line': ローカル変数は 1 度も使われていません。
+c:\users\t1km2\desktop\チーム制作_後期\練習用プロジェクト\mygame\collisionproject1\colli_project1\colli_project1\collision\boundingbox\boundingbox.cpp(62): warning C4101: 'othLine': ローカル変数は 1 度も使われていません。
+  BoundingCircle.cpp
+  main.cpp
+  World.cpp
+  コードを生成中...
+  Colli_Project1.vcxproj -> C:\Users\t1km2\Desktop\チーム制作_後期\練習用プロジェクト\MyGame\CollisionProject1\Colli_Project1\Debug\Colli_Project1.exe

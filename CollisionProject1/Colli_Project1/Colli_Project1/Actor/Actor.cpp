@@ -7,7 +7,8 @@ void Actor::update()
 void Actor::draw() const
 {
 	for (int i = 0; i < 2; i++) {
-		DrawRotaGraph(position_.x, position_.y, exRate, angle_, texture_[i], TRUE, FALSE);
+		DrawRotaGraph(position_.x, position_.y, 
+					  exRate, angle_, texture_[i], TRUE, FALSE);
 	}
 }
 
@@ -30,9 +31,9 @@ void Actor::die()
 
 bool Actor::is_collide(const Actor & other) const
 {
-	if (Box_body_.Extrusion(other.Box_body_))return true;
+	//if (Box_body().Extrusion(other.Box_body_))return true;
 	//if (Seg_body().intersects(other.Seg_body()))return true;
-	//if (Circle_body().intersects(other.Circle_body()))return true;
+	if (Circle_body().intersects(other.Circle_body()))return true;
 	return false;
 }
 
@@ -62,7 +63,7 @@ Vector2 Actor::velocity() const
 }
 
 
-Box Actor::Box_body() const
+BoundingBox Actor::Box_body() const
 {
 	return Box_body_.translate(position_);
 }
@@ -72,7 +73,7 @@ BoundingSegment Actor::Seg_body() const
 	return Seg_body_.translate(position_);
 }
 
-Circle Actor::Circle_body() const
+BoundingCircle Actor::Circle_body() const
 {
 	return Circle_body_.translate(position_);
 }
